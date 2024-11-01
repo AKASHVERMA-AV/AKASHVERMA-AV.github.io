@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.master {
+    height: 98vh;
+    width: 97vw;
+    background-image: url(photo.jpg);
+    background-size: cover;
+    background-position: 0 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper {
+    height: 100%;
+    padding-top: 10px;
+    padding-left: 1rem;
+    width: 20%;
+    margin-top: 52px;
+    transition: 0.2s;
+    position: absolute;
+    transform: translateX(-5000px);
+    box-sizing: border-box;
+    box-shadow: 1px 1px 3px black;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    left: 10px;
+    width:250px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    font-size: 35px;
+}
+
+#header1 {
+    color: white;
+    position: absolute;
+}
+
+#header2 {
+    font-size: 32px;
+    right: 15px;
+    color: grey;
+    display: none;
+    position: absolute;
+    top: 1rem;
+    transition: 0.1s;
+}
+
+#cb {
+    display: none;
+}
+
+#header1:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: 0.2s;
+}
+
+#header2:hover {
+    cursor: pointer;
+    color:red;
+}
+
+.main {
+    overflow: hidden;
+    width: 100%;
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main1 {
+    color: white;
+    font-size: 25px;
+    display: flex;
+    gap: 13px;
+    padding: 15px 0;
+    padding-left: 10px;
+    flex-wrap: wrap;
+}
+
+.main1:hover {
+    transition: 0.5s;
+    transform: scale(1.01);
+    box-shadow: 1px 1px 7px white;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+#mainextra{
+transition: 0.3s;}
+#mainextra:hover{
+        margin-bottom: 4px;
+       
+}
+
+.footer {
+    color: white;
+    font-size: 30px;
+    margin-top: 30px;
+    display: flex;
+    padding-right: 10px;
+    justify-content: space-between;
+}
+
+.footer i {
+    opacity: 0.5;
+}
+
+.footer i:hover {
+    transition: 0.2s;
+    transform: scale(1.05);
+    opacity: 1;
+    cursor: pointer;
+}
+
+#cb:checked ~ .wrapper {
+    transform: translateX(0px);
+}
+
+#cb:checked + label .header #header2 {
+    display: block;
+}
+
+#cb:checked + label .header #header1 {
+    display: none;
+}
